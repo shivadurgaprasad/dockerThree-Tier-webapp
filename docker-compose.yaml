@@ -5,7 +5,9 @@ services:
         build: ./Docker-app
         container_name: application
         ports:
-          - "1234:80"
+          - "1234:8080"
+        depends_on:
+              - "devopsdb"
    database:
       build: ./Docker-db
       container_name: devopsdb
