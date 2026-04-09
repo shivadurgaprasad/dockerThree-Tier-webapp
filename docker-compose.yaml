@@ -7,7 +7,7 @@ services:
         ports:
           - "1234:8080"
         depends_on:
-              - "devopsdb"
+              - "database"
    database:
       build: ./Docker-db
       container_name: devopsdb
