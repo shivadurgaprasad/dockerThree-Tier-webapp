@@ -2,14 +2,12 @@
 version: "3"
 services:
    application:
-        build: ./Docker-app
-        container_name: application
+        image: kothapallishiva/newrepo:appimage
         ports:
-          - "1234:8080"
+          - "1211:8080"
         depends_on:
-              - "database"
-   database:
-      build: ./Docker-db
-      container_name: devopsdb
+              - "devopsdb"
+   devopsdb:
+      image: kothapallishiva/newrepo:dbimage
       ports:
         - "3306:3306"
