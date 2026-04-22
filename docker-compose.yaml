@@ -3,6 +3,8 @@ version: "3"
 services:
    application:
         image: kothapallishiva/newrepo:appimage
+        deploy:
+          replicas: 3
         ports:
           - "1211:8080"
         depends_on:
